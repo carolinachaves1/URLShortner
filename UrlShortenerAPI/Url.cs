@@ -14,7 +14,7 @@ namespace UrlShortenerAPI
         public Url(string urlLong)
         {
             UrlLong = urlLong;
-            UrlShort = "http://localhost:44377/1";
+            UrlShort = "https://localhost:44377/Shortener/1";
         }
     }
 }

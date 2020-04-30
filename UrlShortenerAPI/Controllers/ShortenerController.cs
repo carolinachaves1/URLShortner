@@ -17,25 +17,26 @@ namespace UrlShortenerAPI.Controllers
     [ApiController]
     public class ShortenerController : ControllerBase
     {
-        private static readonly List<Url> urlsList = new List<Url>();
+        private static List<Url> urlsList = new List<Url>();
 
         [HttpPost]
         public ActionResult Post([FromBody] Url url)
         {
             urlsList.Add(url);
 
-            return Ok($"{urlsList.Count}");
+            return Ok($"{url.UrlShort}");
 
         }
 
         [HttpGet("{url}", Name ="Get")]
-        public ActionResult<int> Get(String url)
+        public ActionResult<String> Get(String url)
         {
+            url = "https://localhost:44377/Shortener/" + url;
             //int con = urls.Count;
-            //List<Url> results = urls.FindAll(x => x.UrlShort == url);
+            Url results = urlsList.Find(x => x.UrlShort == url);
 
 
-            return urlsList.Count;
+            return Redirect(results.UrlLong);
         }
     }
 }
