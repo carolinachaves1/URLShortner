@@ -23,6 +23,11 @@ namespace DataObject.Models
 
             return randomId;
         }
+
+       public void SetId()
+        {
+            Id = GenerateRandomId();
+        }
     }
 
 

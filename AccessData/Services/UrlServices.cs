@@ -13,6 +13,7 @@ namespace AccessData.Services
 
         public static String GenerateShortUrl(Url url)
         {
+
             urlsList.Add(url);
 
             return $"https://localhost:{port}/Shortener/{url.Id}";
