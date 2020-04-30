@@ -7,6 +7,9 @@ using System.Runtime.Serialization.Json;
 using System.Text;
 using System.Text.Json;
 using System.Threading.Tasks;
+using AccessData.Services;
+using DataAccess.Exceptions;
+using DataObject.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -16,26 +19,35 @@ namespace UrlShortenerAPI.Controllers
     [ApiController]
     public class ShortenerController : ControllerBase
     {
-        private static List<Url> urlsList = new List<Url>();
-
         [HttpPost]
-        public ActionResult Post([FromBody] Url url)
+        public ActionResult<String> Post([FromBody] Url url)
         {
-            urlsList.Add(url);
+            try
+            {
+                string shortUrl = UrlServices.GenerateShortUrl(url);
 
-            return Ok($"{url.UrlShort}");
-
+                return Ok(shortUrl);
+            }
+            catch
+            {
+                return BadRequest("Error generating shorter URL");
+            }
         }
 
-        [HttpGet("{url}", Name ="Get")]
-        public ActionResult<String> Get(String url)
+        [HttpGet("{id}", Name ="Get")]
+        public ActionResult<String> Get(int id)
         {
-            url = "https://localhost:44377/Shortener/" + url;
-            //int con = urls.Count;
-            Url results = urlsList.Find(x => x.UrlShort == url);
+            try
+            {
+                string longUrl = UrlServices.GenerateLongUrl(id);
 
+                return Redirect(longUrl);
+            }
+            catch(DataAccessException e)
+            {
+                return BadRequest(e);
+            }          
 
-            return Redirect(results.UrlLong);
         }
     }
 }

@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UrlShortenerAPI", "UrlShort
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataObject", "..\DataObject\DataObject.csproj", "{CABD6A0B-B836-4353-BC2C-6137A7E3EBA2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccess", "..\AccessData\DataAccess.csproj", "{1F4C1747-E770-4D4B-A9CC-E06E839BB6D5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{CABD6A0B-B836-4353-BC2C-6137A7E3EBA2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CABD6A0B-B836-4353-BC2C-6137A7E3EBA2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CABD6A0B-B836-4353-BC2C-6137A7E3EBA2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1F4C1747-E770-4D4B-A9CC-E06E839BB6D5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1F4C1747-E770-4D4B-A9CC-E06E839BB6D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1F4C1747-E770-4D4B-A9CC-E06E839BB6D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1F4C1747-E770-4D4B-A9CC-E06E839BB6D5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

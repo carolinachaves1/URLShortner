@@ -8,18 +8,18 @@ namespace DataObject.Models
     public class Url
     {
         public int Id { get; private set; }
-        public string UrlLong { get; set; }
+        public string LongUrl { get; set; }
 
         public Url(string urlLong)
         {
             Id = GenerateRandomId();
-            UrlLong = urlLong;
+            LongUrl = urlLong;
         }
 
         public int GenerateRandomId()
         {
             Random rand = new Random();
-            int randomId = rand.Next(1000, 1500);
+            int randomId = rand.Next(100000, 150000);
 
             return randomId;
         }
