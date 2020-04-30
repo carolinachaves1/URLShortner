@@ -2,6 +2,10 @@
   "iisSettings": {
     "windowsAuthentication": false,
     "anonymousAuthentication": true,
+    "iis": {
+      "applicationUrl": "http://localhost/UrlShortenerAPI",
+      "sslPort": 0
+    },
     "iisExpress": {
       "applicationUrl": "http://localhost:60981",
       "sslPort": 44377
@@ -18,7 +22,7 @@
       }
     },
     "UrlShortenerAPI": {
-      "commandName": "IISExpress",
+      "commandName": "Project",
       "launchBrowser": true,
       "launchUrl": "https://localhost:44377/Shortener/",
       "environmentVariables": {

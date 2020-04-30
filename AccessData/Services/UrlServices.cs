@@ -1,4 +1,5 @@
 ﻿using DataAccess.Exceptions;
+using DataAccess.Utilities;
 using DataObject.Models;
 using System;
 using System.Collections.Generic;
@@ -13,6 +14,13 @@ namespace AccessData.Services
 
         public static String GenerateShortUrl(Url url)
         {
+            var checkShortUrl = Utilities.CheckIfContainsOnList(urlsList, url.Id);
+
+            if(checkShortUrl == true)
+            {
+                url.SetId();
+            }
+
             urlsList.Add(url);
 
             return $"https://localhost:{port}/Shortener/{url.Id}";
