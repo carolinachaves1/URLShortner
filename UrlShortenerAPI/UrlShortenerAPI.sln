@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30011.22
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UrlShortenerAPI", "UrlShortenerAPI.csproj", "{DFA6D705-B1F9-4923-8BB9-FD3AF6CE6714}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UrlShortenerAPI", "UrlShortenerAPI.csproj", "{DFA6D705-B1F9-4923-8BB9-FD3AF6CE6714}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataObject", "..\DataObject\DataObject.csproj", "{CABD6A0B-B836-4353-BC2C-6137A7E3EBA2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{DFA6D705-B1F9-4923-8BB9-FD3AF6CE6714}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DFA6D705-B1F9-4923-8BB9-FD3AF6CE6714}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DFA6D705-B1F9-4923-8BB9-FD3AF6CE6714}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CABD6A0B-B836-4353-BC2C-6137A7E3EBA2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CABD6A0B-B836-4353-BC2C-6137A7E3EBA2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CABD6A0B-B836-4353-BC2C-6137A7E3EBA2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CABD6A0B-B836-4353-BC2C-6137A7E3EBA2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
