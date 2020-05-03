@@ -7,23 +7,33 @@ using System.Text;
 
 namespace AccessData.Services
 {
-    public static class UrlServices
+    public static class UrlServices 
     {
         private static List<Url> urlsList = new List<Url>();
         static int port = 44377;
 
         public static String GenerateShortUrl(Url url)
         {
-            var checkShortUrl = Utilities.CheckIfContainsOnList(urlsList, url.Id);
-
-            if(checkShortUrl == true)
+            try
             {
-                url.SetId();
+                Utilities.CheckIfValidURL(url);
+
+                var checkShortUrl = Utilities.CheckIfContainsOnList(urlsList, url.Id);
+                
+                if (checkShortUrl == true)
+                {
+                    var randomId = url.GenerateRandomId();
+                    url.SetId(randomId);
+                }
+
+                urlsList.Add(url);
+
+                return $"https://localhost:{port}/Shortener/{url.Id}";
             }
-
-            urlsList.Add(url);
-
-            return $"https://localhost:{port}/Shortener/{url.Id}";
+            catch(DataAccessException e)
+            {
+                throw new DataAccessException(e.Message);
+            }
         }
 
         public static String GenerateLongUrl(int id)

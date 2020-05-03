@@ -5,9 +5,13 @@ VisualStudioVersion = 16.0.30011.22
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UrlShortenerAPI", "UrlShortenerAPI.csproj", "{DFA6D705-B1F9-4923-8BB9-FD3AF6CE6714}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataObject", "..\DataObject\DataObject.csproj", "{CABD6A0B-B836-4353-BC2C-6137A7E3EBA2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataObject", "..\DataObject\DataObject.csproj", "{CABD6A0B-B836-4353-BC2C-6137A7E3EBA2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccess", "..\AccessData\DataAccess.csproj", "{1F4C1747-E770-4D4B-A9CC-E06E839BB6D5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataAccess", "..\AccessData\DataAccess.csproj", "{1F4C1747-E770-4D4B-A9CC-E06E839BB6D5}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UrlShortenerAPITests", "..\UrlShortenerAPITests\UrlShortenerAPITests.csproj", "{C8EB922D-66E4-47CC-8E4B-2723E0A17D8B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccessTests", "..\DataAccessTests\DataAccessTests.csproj", "{93095CA2-731B-4D52-9C74-90EBF92A9695}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +31,14 @@ Global
 		{1F4C1747-E770-4D4B-A9CC-E06E839BB6D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1F4C1747-E770-4D4B-A9CC-E06E839BB6D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1F4C1747-E770-4D4B-A9CC-E06E839BB6D5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C8EB922D-66E4-47CC-8E4B-2723E0A17D8B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C8EB922D-66E4-47CC-8E4B-2723E0A17D8B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C8EB922D-66E4-47CC-8E4B-2723E0A17D8B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C8EB922D-66E4-47CC-8E4B-2723E0A17D8B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{93095CA2-731B-4D52-9C74-90EBF92A9695}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{93095CA2-731B-4D52-9C74-90EBF92A9695}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{93095CA2-731B-4D52-9C74-90EBF92A9695}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{93095CA2-731B-4D52-9C74-90EBF92A9695}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

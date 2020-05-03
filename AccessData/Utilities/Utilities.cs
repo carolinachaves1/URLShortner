@@ -1,4 +1,5 @@
-﻿using DataObject.Models;
+﻿using DataAccess.Exceptions;
+using DataObject.Models;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -18,6 +19,19 @@ namespace DataAccess.Utilities
                 return false;
             }
             
+        }
+
+        public static Url CheckIfValidURL(Url url)
+        {
+
+            if (url.LongUrl.StartsWith("http://") || url.LongUrl.StartsWith("https://") || url.LongUrl.Contains("."))
+            {
+                    return url;
+            }
+            else
+            {
+                throw new DataAccessException("Invalid URL");
+            } 
         }
     }
 }

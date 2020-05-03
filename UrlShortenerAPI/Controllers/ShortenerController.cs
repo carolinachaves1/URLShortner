@@ -20,6 +20,8 @@ namespace UrlShortenerAPI.Controllers
     public class ShortenerController : ControllerBase
     {
         [HttpPost]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
         public ActionResult<String> Post([FromBody] Url url)
         {
             try
@@ -28,13 +30,15 @@ namespace UrlShortenerAPI.Controllers
 
                 return Ok(shortUrl);
             }
-            catch
+            catch(DataAccessException e)
             {
-                return BadRequest("Error generating shorter URL");
+                return BadRequest($"Error generating shorter URL: {e.Message}");
             }
         }
 
         [HttpGet("{id}", Name ="Get")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
         public ActionResult<String> Get(int id)
         {
             try

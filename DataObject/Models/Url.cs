@@ -24,9 +24,9 @@ namespace DataObject.Models
             return randomId;
         }
 
-       public void SetId()
+       public void SetId(int randomId)
         {
-            Id = GenerateRandomId();
+            Id = randomId;
         }
     }
 
