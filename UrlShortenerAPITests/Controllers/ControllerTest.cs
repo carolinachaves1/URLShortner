@@ -1,9 +1,6 @@
 using DataObject.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System.Net;
-using System.Net.Http;
-using System.Web.Http;
 using UrlShortenerAPI.Controllers;
 
 namespace UrlShortenerAPITests
