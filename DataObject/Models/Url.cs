@@ -9,10 +9,10 @@ namespace DataObject.Models
         public int Id { get; private set; }
         public string LongUrl { get; set; }
 
-        public Url(string urlLong)
+        public Url(string longUrl)
         {
             Id = GenerateRandomId();
-            LongUrl = urlLong;
+            LongUrl = longUrl;
         }
 
         public int GenerateRandomId()
